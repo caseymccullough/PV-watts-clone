@@ -1,0 +1,212 @@
+*{
+  font-size: 13px;
+}
+
+
+#body{
+  font-family: 'Titillium Web', sans-serif;
+  
+  width: 1100px;
+  background-color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  color: #ff4800;
+  background-color: transparent; 
+
+} 
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+
+  width: 35px;
+  height: 80px;
+  background-color: orange;
+
+}
+
+
+.nav-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#pvwatts-header-text{
+  font-size: 2.5em;
+  font-weight: 200;
+}
+
+.location-bar{
+ width: 100%;
+ height: 60px; 
+ background-image: linear-gradient(red, yellow);
+
+ display: flex;
+ flex-direction: row;
+
+ margin-left: auto;
+ margin-right: auto;
+ justify-content: center;
+ align-items: center;
+
+ color: white;
+}
+
+#address-input{
+  width: 250px;
+  margin: 15px; 
+
+}
+
+.user-address{
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.pin {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  color: blue;
+}
+
+.pin-icon {
+  font-size: 1rem;
+}
+
+.pin-text {
+  font-size: 1.5em;
+}
+
+
+#holding-square{
+  
+  background-color: white;
+  width: 900px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;  
+
+}
+
+main{
+  margin-top: 25px; 
+}
+
+
+h1{
+  color: rgb(255, 94, 0); 
+  font-weight: 600;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  text-align: start;
+  padding: 10px;
+}
+
+.slide{
+  width: 100%;
+  height: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; 
+  text-align: center;
+
+}
+
+#annual-output-num{
+  font-size: 4em;
+  font-weight: 400;
+  color: blue;
+}
+
+#results-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+#credits{
+  font-style: italic;
+  line-height: 1;
+}
+
+#data-values{
+  
+  background-color: darkgray;
+  color: white; 
+  font-size: 40px;
+  width: 250px;
+  border-radius: 20px;
+  padding: 15px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; 
+  margin-bottom: 20px; 
+ 
+
+}
+
+#dropdown-holder{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.dropdown{
+  margin: 20px;
+} 
+
+#home-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  width: 500px;
+}
+
+#kwh-year{
+font-size: 3em;
+color: rgb(87, 87, 87);
+}
+
+Table{
+  border: darkgray 1px solid; 
+  background-color: rgb(176, 222, 238);
+}
+
+
+
+#footer{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+
+  
+
+}
+
+#footer-links{
+  font-weight: 500;
+  font-size: 0.6em;
+}
+
+#nrel-description{
+  margin:0; 
+  margin-top: 2em;
+  background-color: rgba(240, 240, 240);
+  padding: 0 15px;
+}
