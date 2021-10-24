@@ -179,11 +179,28 @@ color: rgb(87, 87, 87);
 }
 
 Table{
-  border: darkgray 1px solid; 
+  border: rgb(253, 220, 220) 1px solid; 
   background-color: rgb(176, 222, 238);
+  font-weight: 700;
+}
+
+/* allows two rows in results table header */
+.table thead td,
+.table thead th {
+    border-top: none;
+    border-bottom: none;
+    padding: 2px; 
 }
 
 
+
+.lastRow{
+  color:rgb(255, 94, 0);
+  background-color: white;
+  border-color: 0px white;
+  font-size: 2em;
+ 
+}
 
 #footer{
 
@@ -194,8 +211,6 @@ Table{
   justify-content: center;
   text-align: center;
   font-size: 20px;
-
-  
 
 }
 
@@ -209,4 +224,12 @@ Table{
   margin-top: 2em;
   background-color: rgba(240, 240, 240);
   padding: 0 15px;
+}
+
+#data-summary-form{
+  width:60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+
 }
