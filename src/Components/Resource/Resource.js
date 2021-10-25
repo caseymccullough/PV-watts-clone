@@ -5,7 +5,6 @@ import Map from '../map/Map.js';
 
 export default function Resource({formData, setFormData}) {
 
-
   console.log ('form data in resources: ');
   console.log (formData);
   
@@ -22,7 +21,7 @@ export default function Resource({formData, setFormData}) {
     
       const handleSubmit = (event) => {
         event.preventDefault();
-        console.log (formData);
+
       }
   
     return (
@@ -54,9 +53,7 @@ export default function Resource({formData, setFormData}) {
           <p> awaiting data</p>
           
           }
-        </Form>
-        
-        
+        </Form>  
       </div>
   );
 }

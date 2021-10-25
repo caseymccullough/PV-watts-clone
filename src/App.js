@@ -21,6 +21,7 @@ export default function App() {
     systemLosses: "14",
     tilt: "20",
     azimuth: "180",
+    utilityName: "",
     price: "",
 });
 
@@ -45,7 +46,7 @@ const [index, setIndex] = useState(0);
             setFormData = {setFormData}>
           </NavBar>
           <main>
-              <Carousel activeIndex={index} onSelect={handleSelect} wrap= {false} interval={null} >
+              <Carousel id="carousel" activeIndex={index} onSelect={handleSelect} wrap= {false} interval={null} >
                 <Carousel.Item>
                   <Home/>
                 </Carousel.Item>

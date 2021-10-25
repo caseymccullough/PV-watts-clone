@@ -13,7 +13,7 @@ export default function System({formData, setFormData}) {
   
   const panelOptions = ["Standard", "Premium", "Thin film"];
   const arrayOptions = ["Fixed - Open Rack", "Fixed - Roof Mounted", "1-Axis", "1-Axis Backtracking", "2-Axis"];
-  const rateTypeOptions = ["Residential", "Commercial"];
+  const rateTypeOptions = ["Residential", "Commercial", "Industrial"];
 
     const handleChange = (event)=> {
       setFormData({ ...formData, [event.target.name]: event.target.value});
@@ -152,6 +152,20 @@ const getElectricityPricing = async (rateType) => {
               To automatically download an average annual retail electricity rate for your location, choose a rate type (residential or commercial). You can change the rate to use a different value by typing a different number.
             </div>
             <br/>
+
+            {/* TO ADD: Listing of current utility  */}
+
+            {/* <label>
+              Your utility:
+            </label>
+              <input type="text" 
+                name="utility"
+                value={formData.utilityName}
+                readOnly
+              ></input>
+            
+            <br></br> */}
+
             <div className="label-and-dropdown">
               <label>Rate Type: </label>
               <DropdownButton className="dropdown" title = {rateTypeDropdown}>      

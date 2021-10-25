@@ -8,13 +8,10 @@ export default function LocationFinder({ setFormattedAddress, formData, setFormD
    const addressRef = useRef('');
    const [invalidAddress, setInvalidAddress] = useState(false);
 
-   const submit = e => {
-      e.preventDefault();
-      
+   const submit = async e => {
+      e.preventDefault();     
       console.log("entered: ", addressRef.current.value);
-
       geocode(addressRef.current.value);
-
     }
 
    function geocode (addressRef) {
@@ -31,13 +28,8 @@ export default function LocationFinder({ setFormattedAddress, formData, setFormD
         let formattedAddress = response.data.results[0].formatted_address;
         let long = response.data.results[0].geometry.location.lng;
         let lat = response.data.results[0].geometry.location.lat;
-
-        console.log ("formatted: ", formattedAddress);
-        console.log ("longitude: ", long);
-        console.log ("latitude: ", lat);
         
         setFormData ({...formData, longitude: long, latitude: lat});
-
         setFormattedAddress(formattedAddress);
 
       })

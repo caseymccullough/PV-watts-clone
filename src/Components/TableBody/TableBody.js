@@ -24,7 +24,7 @@ export default function TableBody (props) {
             {/* last "special" row is below */}
             <tr> 
                 <td className="lastRow"> Annual </td>
-                <td className="lastRow"> {props.solarData.outputs.solrad_annual.toFixed(2)}</td>
+                <td className="lastRow"> {props.solarData.outputs.solrad_annual.toFixed(2)} (avg)</td>
                 <td className="lastRow">{props.solarData.outputs.ac_annual.toFixed(0)}</td>
                 <td className="lastRow">${(props.solarData.outputs.ac_annual * props.elecRate).toFixed(2)}</td>
             </tr> 

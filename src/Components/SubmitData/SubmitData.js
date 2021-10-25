@@ -6,10 +6,16 @@ export default function SubmitData ({formData, setFormData, setSolarData}) {
   const panelOptions = ["Standard", "Premium", "Thin film"];
   const arrayOptions = ["Fixed - Open Rack", "Fixed - Roof Mounted", "1-Axis", "1-Axis Backtracking", "2-Axis"];
         
-  const handleChange = (event)=> {
-    setFormData({ ...formData, [event.target.name]: event.target.value});
-    console.log(event.target.name + ": " + event.target.value);
-  }
+  // const handleChange = (event)=> {
+  //   setFormData({ ...formData, [event.target.name]: event.target.value});
+  //   console.log(event.target.name + ": " + event.target.value);
+  // }
+
+    // const dataElements = keyValArray.map((str, i) => {
+  //     return (
+  //        (str !== undefined) ? <p key= {i}>{str}</p>: <p></p>
+  //     )
+  // });
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,12 +28,6 @@ export default function SubmitData ({formData, setFormData, setSolarData}) {
       })
       
       keyValue(formData);
-      const dataElements = keyValArray.map((str, i) => {
-          return (
-             (str !== undefined) ? <p key= {i}>{str}</p>: <p></p>
-          )
-      });
-
 
     const getSolarData = async () => {
       try {
@@ -43,6 +43,8 @@ export default function SubmitData ({formData, setFormData, setSolarData}) {
         const res = await fetch(updatedUrl);
         const data = await res.json();
         setSolarData(data);
+
+        ('carousel').carousel('next');
       
       } catch (err) {
         console.log(err);
