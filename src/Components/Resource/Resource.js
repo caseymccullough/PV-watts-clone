@@ -29,7 +29,7 @@ export default function Resource({formData, setFormData}) {
       <div className="resource slide">
         <h1>Solar Resource Data</h1>
         <script type="text/javascript"></script>
-        <p>Please enter your latitude, longitude, and electricity price below</p>
+        <p>If necessary, modify your latitude, longitude below</p>
         <Form onSubmit={handleSubmit} className="lat-and-long-form form slide">
           <label > Latitude </label>
             <input 

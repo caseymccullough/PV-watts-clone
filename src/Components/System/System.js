@@ -79,7 +79,6 @@ export default function System({formData, setFormData}) {
               <label> Array Type </label>
               <DropdownButton
                   title={arrayDropdown}
-                  id="dropdown-basic-button"
                   className="dropdown"  
                   >
                       <Dropdown.Item onSelect = {handleSelectArray} eventKey="0">{arrayOptions[0]}</Dropdown.Item>
@@ -129,13 +128,15 @@ export default function System({formData, setFormData}) {
             <div className = "explanatory-text">
               To automatically download an average annual retail electricity rate for your location, choose a rate type (residential or commercial). You can change the rate to use a different value by typing a different number.
             </div>
-
-            <label>Rate Type: </label>
-            <DropdownButton id="dropdown-basic-button" title = {rateTypeDropdown}>      
-              <Dropdown.Item onSelect = {handleSelectRateType} eventKey="0">{rateTypeOptions[0]}</Dropdown.Item>
-              <Dropdown.Item onSelect = {handleSelectRateType} eventKey="1">{rateTypeOptions[1]}</Dropdown.Item>
-              <Dropdown.Item onSelect = {handleSelectRateType} eventKey="2">{rateTypeOptions[2]}</Dropdown.Item>
-            </DropdownButton>
+            <br/>
+            <div className="label-and-dropdown">
+              <label>Rate Type: </label>
+              <DropdownButton className="dropdown" title = {rateTypeDropdown}>      
+                <Dropdown.Item onSelect = {handleSelectRateType} eventKey="0">{rateTypeOptions[0]}</Dropdown.Item>
+                <Dropdown.Item onSelect = {handleSelectRateType} eventKey="1">{rateTypeOptions[1]}</Dropdown.Item>
+                <Dropdown.Item onSelect = {handleSelectRateType} eventKey="2">{rateTypeOptions[2]}</Dropdown.Item>
+              </DropdownButton>
+            </div>
 
               <label>Rate ($/kWh): </label>
               <input type="text" 
