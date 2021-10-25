@@ -29,8 +29,7 @@ export default function App() {
 const [formattedAddress, setFormattedAddress] = useState("");
 const [solarData, setSolarData] = useState({});
 const [index, setIndex] = useState(0);
-const [isDataValid, setValidData] = useState(0);
-  
+ 
   const handleSelect = (selectedIndex, e) => {
       setIndex(selectedIndex);
     };
@@ -57,7 +56,7 @@ const [isDataValid, setValidData] = useState(0);
                   <System formData = {formData} setFormData = {setFormData}> </System>
                 </Carousel.Item>
                 <Carousel.Item>  
-                  <SubmitData formData = {formData} setValidData = {setValidData} setSolarData={setSolarData}> </SubmitData>   
+                  <SubmitData formData = {formData} setFormData = {setFormData} setSolarData={setSolarData}> </SubmitData>   
                 </Carousel.Item>
                  <Carousel.Item>  
                    <Results formData={formData} solarData={solarData} ></Results>  

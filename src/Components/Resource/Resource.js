@@ -31,33 +31,24 @@ export default function Resource({formData, setFormData}) {
         <script type="text/javascript"></script>
         <p>Please enter your latitude, longitude, and electricity price below</p>
         <Form onSubmit={handleSubmit} className="lat-and-long-form form slide">
-          <label >
-            Latitude
+          <label > Latitude </label>
             <input 
               type = "text" 
               name="latitude" 
               value={formData.latitude} 
               onChange={handleChange}
               ></input>
-          </label>
+          
           <br></br>
-          <label>
-            Longitude
+          <label> Longitude </label>
             <input type="text" 
             name="longitude"
             value={formData.longitude}
             onChange={handleChange}
             ></input>
-          </label>
+          
           <br></br>
-          <label>
-            Electricity Price
-            <input type="text" 
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
-            ></input>
-          </label>
+          
           {formData.latitude && formData.longitude ?
           <Map zoomLevel={17} formData = {formData}/> :
           <p> awaiting data</p>

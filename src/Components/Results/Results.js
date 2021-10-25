@@ -6,7 +6,7 @@ import TableBody from '../TableBody/TableBody';
 
 export default function Results(props) {
 
-  console.log (props.ac_annualsolarData);
+  //console.log (props.ac_annualsolarData);
 
   return (
       <div className="results slide">
