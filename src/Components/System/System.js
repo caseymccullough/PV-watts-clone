@@ -32,11 +32,34 @@ export default function System({formData, setFormData}) {
       //console.log ("CHANGE TO: " + arrayOptions[eventKey]);
   }
 
-  const handleSelectRateType = (eventKey, event) =>  {
+  const handleSelectRateType = async (eventKey, event) =>  {
     //setFormData({ ...formData, rateTypeIndex: eventKey });
-    setArrayDropdown(rateTypeOptions[eventKey]);
-    //console.log ("CHANGE TO: " + arrayOptions[eventKey]);
+    const selectedRateType = rateTypeOptions[eventKey];
+    setRateTypeDropdown(selectedRateType);
+    const utilityPrice = await getElectricityPricing(selectedRateType.toLowerCase());
+    setFormData({ ...formData, price : utilityPrice});
+    console.log ("CHANGE TO: " + utilityPrice);
 }
+
+const getElectricityPricing = async (rateType) => {
+  try {
+    let updatedUrl = `https://developer.nrel.gov/api/utility_rates/v3.json?api_key=DEMO_KEY&lat=`
+    + formData.latitude + `&lon=` + formData.longitude; 
+    
+    console.log (updatedUrl);
+
+    const res = await fetch(updatedUrl);
+    const data = await res.json();
+
+
+    console.log ("PRICING DATA:" + data.outputs[rateType]); // Note--this is square bracket notation. 
+    //setSolarData(data);
+    return data.outputs[rateType];
+  
+  } catch (err) {
+    console.log(err);
+  }
+};
     
     const handleSubmit = (event) => {
       event.preventDefault();

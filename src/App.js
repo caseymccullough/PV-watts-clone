@@ -21,7 +21,7 @@ export default function App() {
     systemLosses: "14",
     tilt: "20",
     azimuth: "180",
-    price: ".12",
+    price: "",
 });
 
 /*** USE formData AND setFormData  */
